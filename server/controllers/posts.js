@@ -2,8 +2,7 @@ import Post from "../models/Posts.js";
 import User from "../models/User.js";
 
 /* CREATE */
-
-export const createPosts = async (req, res) => {
+export const createPost = async (req, res) => {
 	try {
 		const { userId, description, picturePath } = req.body;
 		const user = await User.findById(userId);
@@ -40,7 +39,7 @@ export const getFeedPosts = async (req, res) => {
 	}
 };
 
-export const getUserposts = async (req, res) => {
+export const getUsersPosts = async (req, res) => {
 	try {
 		const { userId } = req.params;
 		const post = await Post.find({ userId });
