@@ -15,7 +15,7 @@ const App = () => {
 		<div className="app">
 			<BrowserRouter>
 				<ThemeProvider theme={theme}>
-					<CssBaseline />
+					<CssBaseline /> {/* css reset */}
 					<Routes>
 						<Route
 							path="/"
